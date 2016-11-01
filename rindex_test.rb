@@ -22,6 +22,12 @@ class TestRindex < Minitest::Test
         arr = ["a","b","c"]
         assert_equal(0, arr.my_index("a"))
     end
+
+    def test_for_multiple_indexes
+        arr = ["a","b","c","d","d","e"]
+        assert_equal(4,arr.my_index("d")) 
+        assert_equal(1, arr.my_index("b"))
+    end
 #     def test_reverse #tests that board shows up
 #         array = ["a", "b", "b", "b", "b", "c"]
 #         assert_equal(["c","b","b","b","b","a"], backwards(array))
